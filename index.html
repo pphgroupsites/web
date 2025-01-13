@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Web Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPH Group Inc. - Advanced Tracking Solutions</title>
+    <link rel="stylesheet" href="styles.css">
     <script>
         if (!localStorage.getItem('authenticated')) {
             window.location.href = 'password.html';
@@ -9,11 +12,85 @@
     </script>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">PPH Group Inc.</div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="#" id="logout">Logout</a>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-    <h1>Welcome to My Web Page</h1>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Advanced Tracking Solutions for Your Business</h1>
+                <p>PPH Group Inc. provides cutting-edge tracking technology to optimize your logistics and supply chain.</p>
+                <a href="contact.html" class="btn">Get Started</a>
+            </div>
+        </section>
 
-    <p>This is some sample text.</p>
+        <section class="features">
+            <div class="container">
+                <h2>Our Features</h2>
+                <div class="feature-grid">
+                    <div class="feature">
+                        <h3>Real-time Tracking</h3>
+                        <p>Monitor your assets and shipments in real-time with our advanced GPS technology.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Efficient Time Management</h3>
+                        <p>Optimize routes and reduce delivery times with our intelligent scheduling system.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Comprehensive Analytics</h3>
+                        <p>Gain valuable insights into your operations with our detailed reporting and analytics tools.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PPH Group Inc.</h3>
+                    <p>Advanced tracking solutions for modern businesses.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@pphgroup.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#">Twitter</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 PPH Group Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('logout').addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('authenticated');
+            window.location.href = 'password.html';
+        });
+    </script>
 </body>
 </html>
-
