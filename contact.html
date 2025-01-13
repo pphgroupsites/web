@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Web Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - PPH Group Inc.</title>
+    <link rel="stylesheet" href="styles.css">
     <script>
         if (!localStorage.getItem('authenticated')) {
             window.location.href = 'password.html';
@@ -9,11 +12,103 @@
     </script>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">PPH Group Inc.</div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="#" id="logout">Logout</a>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-    <h1>Welcome to My Web Page</h1>
+    <main>
+        <section class="contact">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you. Please fill out the form below or use our contact information to get in touch.</p>
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <h2>Send us a message</h2>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h2>Contact Information</h2>
+                        <p><strong>Address:</strong> 123 Tracking Ave, Tech City, TC 12345</p>
+                        <p><strong>Phone:</strong> (555) 123-4567</p>
+                        <p><strong>Email:</strong> info@pphgroup.com</p>
+                        <h3>Business Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                        <p>Saturday - Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <p>This is some sample text.</p>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PPH Group Inc.</h3>
+                    <p>Advanced tracking solutions for modern businesses.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@pphgroup.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#">Twitter</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 PPH Group Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
+    <script>
+        document.getElementById('logout').addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('authenticated');
+            window.location.href = 'password.html';
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message. We\'ll be in touch soon!');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
-
