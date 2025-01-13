@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Webpage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - PPH Group Inc.</title>
+    <link rel="stylesheet" href="styles.css">
     <script>
         if (!localStorage.getItem('authenticated')) {
             window.location.href = 'password.html';
@@ -9,8 +12,109 @@
     </script>
 </head>
 <body>
-    <h1>Welcome to My Webpage</h1>
-    <p>This is some sample text.</p>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">PPH Group Inc.</div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="#" id="logout">Logout</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="services">
+            <div class="container">
+                <h1>Our Services</h1>
+                <p>At PPH Group Inc., we offer cutting-edge tracking solutions to optimize your business operations. Our services are designed to enhance efficiency, reduce costs, and provide real-time visibility across your supply chain.</p>
+                
+                <div class="service-grid">
+                    <div class="service">
+                        <h2>Asset Tracking</h2>
+                        <p>Keep track of your valuable assets in real-time with our advanced GPS and IoT solutions. Our asset tracking service helps you:</p>
+                        <ul>
+                            <li>Monitor equipment location and usage</li>
+                            <li>Prevent theft and unauthorized use</li>
+                            <li>Optimize asset utilization</li>
+                            <li>Streamline maintenance schedules</li>
+                        </ul>
+                    </div>
+                    <div class="service">
+                        <h2>Fleet Management</h2>
+                        <p>Optimize your fleet operations with our comprehensive management and analytics tools. Our fleet management service offers:</p>
+                        <ul>
+                            <li>Real-time vehicle tracking</li>
+                            <li>Route optimization</li>
+                            <li>Fuel consumption monitoring</li>
+                            <li>Driver behavior analysis</li>
+                            <li>Maintenance scheduling</li>
+                        </ul>
+                    </div>
+                    <div class="service">
+                        <h2>Supply Chain Visibility</h2>
+                        <p>Gain end-to-end visibility of your supply chain with our integrated tracking solutions. This service provides:</p>
+                        <ul>
+                            <li>Real-time shipment tracking</li>
+                            <li>Inventory management</li>
+                            <li>Supplier performance monitoring</li>
+                            <li>Predictive analytics for demand forecasting</li>
+                            <li>Exception management and alerts</li>
+                        </ul>
+                    </div>
+                    <div class="service">
+                        <h2>Custom Solutions</h2>
+                        <p>We develop tailored tracking solutions to meet your specific business needs and challenges. Our custom solutions can include:</p>
+                        <ul>
+                            <li>Integration with existing systems</li>
+                            <li>Customized reporting and analytics</li>
+                            <li>Specialized hardware development</li>
+                            <li>Industry-specific tracking solutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PPH Group Inc.</h3>
+                    <p>Advanced tracking solutions for modern businesses.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@pphgroup.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#">Twitter</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 PPH Group Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('logout').addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('authenticated');
+            window.location.href = 'password.html';
+        });
+    </script>
 </body>
 </html>
-
