@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Webpage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - PPH Group Inc.</title>
+    <link rel="stylesheet" href="styles.css">
     <script>
         if (!localStorage.getItem('authenticated')) {
             window.location.href = 'password.html';
@@ -9,8 +12,104 @@
     </script>
 </head>
 <body>
-    <h1>Welcome to My Webpage</h1>
-    <p>This is some sample text.</p>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">PPH Group Inc.</div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="#" id="logout">Logout</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="careers">
+            <div class="container">
+                <h1>Join Our Team</h1>
+                <p>At PPH Group Inc., we're always looking for talented individuals to join our growing team. If you're passionate about technology and innovation, we want to hear from you!</p>
+                
+                <h2>Why Work With Us?</h2>
+                <ul>
+                    <li>Innovative work environment</li>
+                    <li>Competitive salary and benefits</li>
+                    <li>Opportunities for professional growth</li>
+                    <li>Collaborative and inclusive culture</li>
+                    <li>Work on cutting-edge tracking technologies</li>
+                </ul>
+                
+                <h2>Open Positions</h2>
+                <div class="job-listings">
+                    <div class="job">
+                        <h3>Software Engineer</h3>
+                        <p>We're seeking a talented software engineer to help develop our next-generation tracking solutions.</p>
+                        <a href="#" class="btn">Apply Now</a>
+                    </div>
+                    <div class="job">
+                        <h3>Data Analyst</h3>
+                        <p>Join our analytics team to help derive insights from our vast tracking data.</p>
+                        <a href="#" class="btn">Apply Now</a>
+                    </div>
+                    <div class="job">
+                        <h3>Sales Representative</h3>
+                        <p>Help us grow our business by bringing our innovative solutions to new clients.</p>
+                        <a href="#" class="btn">Apply Now</a>
+                    </div>
+                </div>
+                
+                <h2>Application Process</h2>
+                <ol>
+                    <li>Review our open positions and select the role you're interested in.</li>
+                    <li>Click the "Apply Now" button to start your application.</li>
+                    <li>Fill out the application form, including your contact information and work history.</li>
+                    <li>Upload your resume and a cover letter.</li>
+                    <li>Our HR team will review your application and contact you if there's a good fit.</li>
+                    <li>If selected, you'll be invited for interviews and further assessments.</li>
+                </ol>
+                
+                <p>Don't see a position that fits your skills? We're always interested in hearing from talented individuals. Send your resume to careers@pphgroup.com with a brief explanation of how you could contribute to our team.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PPH Group Inc.</h3>
+                    <p>Advanced tracking solutions for modern businesses.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@pphgroup.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#">Twitter</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 PPH Group Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('logout').addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('authenticated');
+            window.location.href = 'password.html';
+        });
+    </script>
 </body>
 </html>
-
